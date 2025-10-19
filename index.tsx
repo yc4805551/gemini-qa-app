@@ -28,7 +28,7 @@ function App() {
         contents: prompt,
       });
 
-      setResponse(result.text);
+      setResponse(result.text ?? '');
     } catch (err) {
       console.error(err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred.');
